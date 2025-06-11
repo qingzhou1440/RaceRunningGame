@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Boy Race Running Game - Play Free Online | xxx.com</title>
+    <meta name="description" content="Play Paper Boy Race Running Game for free online. Navigate through challenging obstacles, collect papers, and become the ultimate paper delivery champion in this exciting endless runner game.">
+    <meta name="keywords" content="paper boy game, running game, online games, free games, endless runner, delivery game">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://xxx.com">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Paper Boy Race Running Game - Play Free Online">
+    <meta property="og:description" content="Experience the thrill of paper delivery in this exciting running game. Dodge obstacles and deliver papers to become the ultimate paper boy!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xxx.com">
+    
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1d1d1f;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #007aff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007aff;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #6e6e73;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .game-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .game-frame {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1d1d1f;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #424245;
+            line-height: 1.7;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+
+        .checkmark {
+            color: #34c759;
+            font-weight: bold;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #007aff, #5856d6);
+            border-radius: 20px;
+            color: white;
+            margin-bottom: 3rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .game-frame {
+                height: 400px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .game-container {
+                padding: 1rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .game-frame {
+                height: 350px;
+            }
+
+            .cta-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">xxx.com</a>
+                <nav>
+                    <ul>
+                        <li><a href="#game">Play Game</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#tips">Tips</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Paper Boy Race Running Game</h1>
+                <p class="subtitle">Navigate through challenging obstacles, collect papers, and become the ultimate paper delivery champion in this exciting endless runner adventure!</p>
+            </section>
+
+            <section id="game" class="game-container">
+                <iframe 
+                    src="https://www.crazygames.com/game/paper-boy-race-running-game" 
+                    class="game-frame"
+                    title="Paper Boy Race Running Game - Play Online"
+                    allowfullscreen>
+                </iframe>
+            </section>
+
+            <div class="content-grid">
+                <article id="about" class="content-card">
+                    <h2><span class="icon">🎮</span>About Paper Boy Race Running Game</h2>
+                    <p>Paper Boy Race Running Game is an exhilarating endless runner that puts you in the shoes of a dedicated paper delivery boy. Your mission is to navigate through busy streets, dodge obstacles, and deliver newspapers to eager customers while maintaining your speed and agility.</p>
+                    <p>This fast-paced game combines classic arcade action with modern gameplay mechanics, offering hours of entertainment for players of all ages. The intuitive controls make it easy to jump right in, while the challenging gameplay keeps you coming back for more.</p>
+                </article>
+
+                <article id="features" class="content-card">
+                    <h2><span class="icon">⭐</span>Game Features</h2>
+                    <ul class="features-list">
+                        <li><span class="checkmark">✓</span> Endless running gameplay with increasing difficulty</li>
+                        <li><span class="checkmark">✓</span> Smooth and responsive controls</li>
+                        <li><span class="checkmark">✓</span> Colorful and engaging graphics</li>
+                        <li><span class="checkmark">✓</span> Multiple obstacles and challenges</li>
+                        <li><span class="checkmark">✓</span> Paper collection and delivery mechanics</li>
+                        <li><span class="checkmark">✓</span> Score tracking and achievements</li>
+                        <li><span class="checkmark">✓</span> Mobile and desktop compatible</li>
+                    </ul>
+                </article>
+
+                <article class="content-card">
+                    <h2><span class="icon">🎯</span>How to Play</h2>
+                    <p>Getting started with Paper Boy Race Running Game is simple! Use the arrow keys or touch controls to move your character left and right. Jump over obstacles by pressing the spacebar or tapping the screen.</p>
+                    <p>Your goal is to collect as many newspapers as possible while avoiding cars, pedestrians, and other street obstacles. The longer you survive, the faster the game becomes, testing your reflexes and decision-making skills.</p>
+                    <p>Keep an eye out for power-ups that can help you along the way, and try to beat your high score with each playthrough!</p>
+                </article>
+
+                <article id="tips" class="content-card">
+                    <h2><span class="icon">💡</span>Pro Tips & Strategies</h2>
+                    <p><strong>Master the Timing:</strong> Success in Paper Boy Race Running Game comes down to perfect timing. Learn the rhythm of the obstacles and plan your moves accordingly.</p>
+                    <p><strong>Collect Everything:</strong> Don't just focus on avoiding obstacles – make sure to collect as many newspapers as possible to maximize your score.</p>
+                    <p><strong>Stay Focused:</strong> As the game speeds up, it's easy to panic. Stay calm, keep your eyes on the road ahead, and trust your reflexes.</p>
+                    <p><strong>Practice Makes Perfect:</strong> Like any skill-based game, the more you play, the better you'll become at recognizing patterns and reacting quickly.</p>
+                </article>
+            </div>
+
+            <section class="cta-section">
+                <h2>Ready for the Ultimate Paper Delivery Challenge?</h2>
+                <p>Join thousands of players who have already discovered the thrill of Paper Boy Race Running Game. Test your skills, beat your high score, and become the paper delivery legend!</p>
+                <a href="#game" class="cta-button">Play Now - It's Free!</a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 xxx.com. All rights reserved. Play Paper Boy Race Running Game and other exciting online games for free!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading state for iframe
+        const gameFrame = document.querySelector('.game-frame');
+        gameFrame.addEventListener('load', function() {
+            console.log('Game loaded successfully');
+        });
+
+        // Simple analytics tracking (replace with your actual analytics code)
+        function trackGamePlay() {
+            console.log('Game interaction tracked');
+            // Add your analytics tracking code here
+        }
+
+        // Track when user scrolls to game section
+        const gameSection = document.querySelector('#game');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    trackGamePlay();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(gameSection);
+    </script>
+</body>
+</html>
